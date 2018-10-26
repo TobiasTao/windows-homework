@@ -7,3 +7,14 @@ E:\vsprojects\WPFTest\Models\obj\Debug\Models.dll
 E:\vsprojects\WPFTest\Models\obj\Debug\Models.pdb
 E:\vsprojects\WPFTest\Models\bin\Debug\System.Data.SQLite.dll
 E:\vsprojects\WPFTest\Models\bin\Debug\SQLite.Interop.dll
+E:\C++ project\codes-by--lhw\WPFTest\Models\bin\Debug\SQLite.Interop.dll
+E:\C++ project\codes-by--lhw\WPFTest\Models\bin\Debug\System.Data.SQLite.dll
+E:\C++ project\codes-by--lhw\WPFTest\Models\bin\Debug\Models.dll
+E:\C++ project\codes-by--lhw\WPFTest\Models\bin\Debug\Models.pdb
+E:\C++ project\codes-by--lhw\WPFTest\Models\bin\Debug\Utils.dll
+E:\C++ project\codes-by--lhw\WPFTest\Models\bin\Debug\Utils.pdb
+E:\C++ project\codes-by--lhw\WPFTest\Models\obj\Debug\Models.csprojAssemblyReference.cache
+E:\C++ project\codes-by--lhw\WPFTest\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+E:\C++ project\codes-by--lhw\WPFTest\Models\obj\Debug\Models.csproj.CopyComplete
+E:\C++ project\codes-by--lhw\WPFTest\Models\obj\Debug\Models.dll
+E:\C++ project\codes-by--lhw\WPFTest\Models\obj\Debug\Models.pdb

@@ -70,7 +70,7 @@ namespace WPFTest.UI.Chapter3
                 object section_nextPage = MsWord.WdBreakType.wdSectionBreakNextPage;
                 object page_break = MsWord.WdBreakType.wdPageBreak;
                 //添加三个分节符，共四个小节
-                for (int si = 0; si < 4; si++)
+                for (int si = 0; si < 5; si++)
                 {
                     oDoc.Paragraphs[1].Range.InsertParagraphAfter();
                     oDoc.Paragraphs[1].Range.InsertBreak(ref section_nextPage);
@@ -150,9 +150,6 @@ namespace WPFTest.UI.Chapter3
                 curRange.Select();
                 curRange.Font.Bold = 1;
                 #endregion 摘要部分
-
-
-
 
                 Console.WriteLine(" 正在插入目录");
                 showComment("正在插入目录");
@@ -315,6 +312,27 @@ namespace WPFTest.UI.Chapter3
                 showComment("完成插入图片，并设置格式");
                 #endregion 第三章
 
+                Console.WriteLine("正在插入新的章节");
+                showComment("正在插入第四章内容");
+                #region 添加新的章节，并添加参考文献部分。
+                curSectionNum = 6;
+                oDoc.Sections[curSectionNum].Range.Paragraphs[1].Range.Select();
+                curRange = oDoc.Sections[curSectionNum].Range.Paragraphs[1].Range;
+                currentSelection.TypeText("4 参考文献");
+                currentSelection.TypeParagraph();
+                currentSelection.TypeText(" 参考文献示例");
+                currentSelection.TypeParagraph();
+
+
+                object note = "参考文献1";
+                curRange.InsertCrossReference(MsWord.WdReferenceType.wdRefTypeEndnote, MsWord.WdReferenceKind.wdEndnoteNumber,
+                    note, ref missing, ref missing, ref missing);
+                //currentSelection.TypeText("参考文献1");
+
+                showComment("完成添加参考文献");
+                #endregion
+
+
 
                 Console.WriteLine(" 正在设置第一节摘要页眉内容");
                 showComment("正在设置第一节摘要页眉内容");
@@ -450,7 +468,7 @@ MsWord.WdSeekView.wdSeekMainDocument;
             {
                 // Debug.WriteLine(process.MainWindowTitle);
                 // 如果有的话获得 Winword.exe 的完全限定名称。
-                winwordPath = process.MainModule.FileName;
+                  winwordPath = process.MainModule.FileName;
                 break;
             }
 

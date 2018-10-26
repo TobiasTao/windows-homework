@@ -11,3 +11,17 @@ E:\vsprojects\WPFTest\BaseComponents\obj\Debug\BaseComponents.g.resources
 E:\vsprojects\WPFTest\BaseComponents\obj\Debug\BaseComponents.dll
 E:\vsprojects\WPFTest\BaseComponents\obj\Debug\BaseComponents.pdb
 E:\vsprojects\WPFTest\BaseComponents\obj\Debug\BaseComponents.csprojResolveAssemblyReference.cache
+E:\C++ project\codes-by--lhw\WPFTest\BaseComponents\bin\Debug\BaseComponents.dll
+E:\C++ project\codes-by--lhw\WPFTest\BaseComponents\bin\Debug\BaseComponents.pdb
+E:\C++ project\codes-by--lhw\WPFTest\BaseComponents\obj\Debug\BaseComponents.csprojAssemblyReference.cache
+E:\C++ project\codes-by--lhw\WPFTest\BaseComponents\obj\Debug\Block.baml
+E:\C++ project\codes-by--lhw\WPFTest\BaseComponents\obj\Debug\Block.g.cs
+E:\C++ project\codes-by--lhw\WPFTest\BaseComponents\obj\Debug\LoadingAnimation.g.cs
+E:\C++ project\codes-by--lhw\WPFTest\BaseComponents\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\C++ project\codes-by--lhw\WPFTest\BaseComponents\obj\Debug\BaseComponents_MarkupCompile.cache
+E:\C++ project\codes-by--lhw\WPFTest\BaseComponents\obj\Debug\BaseComponents_MarkupCompile.lref
+E:\C++ project\codes-by--lhw\WPFTest\BaseComponents\obj\Debug\LoadingAnimation.baml
+E:\C++ project\codes-by--lhw\WPFTest\BaseComponents\obj\Debug\BaseComponents.g.resources
+E:\C++ project\codes-by--lhw\WPFTest\BaseComponents\obj\Debug\BaseComponents.csproj.CoreCompileInputs.cache
+E:\C++ project\codes-by--lhw\WPFTest\BaseComponents\obj\Debug\BaseComponents.dll
+E:\C++ project\codes-by--lhw\WPFTest\BaseComponents\obj\Debug\BaseComponents.pdb

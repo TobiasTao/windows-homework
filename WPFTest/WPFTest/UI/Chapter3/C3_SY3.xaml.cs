@@ -19,6 +19,7 @@ using dll_csharp;
 using MsExcel = Microsoft.Office.Interop.Excel;
 using System.IO;
 using System.Diagnostics;
+using System.Data;
 
 namespace WPFTest.UI.Chapter3
 {
@@ -46,6 +47,7 @@ namespace WPFTest.UI.Chapter3
         private void btn1_Click_1(object sender, RoutedEventArgs e)
         {
             clearComments();
+            string showFileName = Directory.GetCurrentDirectory() + @"\hotel.xls";
             string src_file_name = Directory.GetCurrentDirectory() + @"\Files\list.csv";
             string dest_file_name = Directory.GetCurrentDirectory() + @"\Files\list.xlsx";
             MsExcel.Application oExcApp;//Excel Application;
@@ -92,6 +94,20 @@ namespace WPFTest.UI.Chapter3
                     a_str = sw.ReadLine();
                 }
                 sw.Close();
+
+
+                DataTable showdata = GetExcelData(showFileName);
+                foreach (DataRow row in showdata.Rows)
+                {
+                    foreach (DataColumn column in showdata.Columns)
+                    {
+                        showComment(row[column].ToString());
+                    }
+                }
+
+
+
+
                 for (int i1 = 0; i1 < 5; i1++)
                 {
                     for (int j = 0; j < 8; j++)
@@ -178,7 +194,7 @@ namespace WPFTest.UI.Chapter3
             {
                 // Debug.WriteLine(process.MainWindowTitle);
                 // 如果有的话获得 EXCEL.exe 的完全限定名称。
-                excelExePath = process.MainModule.FileName;
+                //excelExePath = process.MainModule.FileName;                                                                
                 break;
             }
 
@@ -203,6 +219,85 @@ namespace WPFTest.UI.Chapter3
             excelProcess.Close();
 
         }
+
+        private Stopwatch wath = new Stopwatch();
+   /// <summary>
+   /// 使用COM读取Excel
+    /// </summary>
+    /// <param name="excelFilePath">路径</param>
+    /// <returns>DataTabel</returns>
+    public DataTable GetExcelData(string excelFilePath)
+    {
+      MsExcel.Application app = new MsExcel.Application();
+            MsExcel.Sheets sheets;
+            MsExcel.Workbook workbook = null;
+       object oMissiong = System.Reflection.Missing.Value;
+      DataTable dt = new DataTable();
+       wath.Start();
+       try
+      {
+           if (app == null)
+           {
+              return null;
+           }
+          workbook = app.Workbooks.Open(excelFilePath, oMissiong, oMissiong, oMissiong, oMissiong, oMissiong,
+               oMissiong, oMissiong, oMissiong, oMissiong, oMissiong, oMissiong, oMissiong, oMissiong, oMissiong);
+           //将数据读入到DataTable中——Start   
+           sheets = workbook.Worksheets;
+                MsExcel.Worksheet worksheet = (MsExcel.Worksheet)sheets.get_Item(1);//读取第一张表
+           if (worksheet == null)
+               return null;
+           string cellContent;
+           int iRowCount = worksheet.UsedRange.Rows.Count;
+           int iColCount = worksheet.UsedRange.Columns.Count;
+                MsExcel.Range range;
+                //负责列头Start
+                DataColumn dc;
+           int ColumnID = 1;
+          range = (MsExcel.Range) worksheet.Cells[1, 1];
+           while (range.Text.ToString().Trim() != "")
+           {
+               dc = new DataColumn();
+               dc.DataType = System.Type.GetType("System.String");
+               dc.ColumnName = range.Text.ToString().Trim();
+               dt.Columns.Add(dc);
+    
+               range = (MsExcel.Range) worksheet.Cells[1, ++ColumnID];
+           }
+           //End
+           for (int iRow = 2; iRow <= iRowCount; iRow++)
+          {
+                    DataRow dr = dt.NewRow();
+               for (int iCol = 1; iCol <= iColCount; iCol++)
+               {
+                   range = (MsExcel.Range) worksheet.Cells[iRow, iCol];
+                   cellContent = (range.Value2 == null) ? "" : range.Text.ToString();
+                       dr[iCol - 1] = cellContent;
+               }
+               dt.Rows.Add(dr);
+           }
+           wath.Stop();
+           TimeSpan ts = wath.Elapsed;
+           //将数据读入到DataTable中——End
+           return dt;
+       }
+       catch
+       {
+           return null;
+       }
+       finally
+       {
+           workbook.Close(false, oMissiong, oMissiong);
+           System.Runtime.InteropServices.Marshal.ReleaseComObject(workbook);
+           workbook = null;
+           app.Workbooks.Close();
+           app.Quit();
+           System.Runtime.InteropServices.Marshal.ReleaseComObject(app);
+           app = null;
+           GC.Collect();
+           GC.WaitForPendingFinalizers();
+       }
+   }
 
 
     }

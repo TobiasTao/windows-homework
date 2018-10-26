@@ -7,3 +7,15 @@ E:\vsprojects\WPFTest\Utils\obj\Debug\Utils.dll
 E:\vsprojects\WPFTest\Utils\obj\Debug\Utils.pdb
 E:\vsprojects\WPFTest\Utils\bin\Debug\System.Data.SQLite.dll
 E:\vsprojects\WPFTest\Utils\bin\Debug\SQLite.Interop.dll
+E:\C++ project\codes-by--lhw\WPFTest\Utils\bin\Debug\SQLite.Interop.dll
+E:\C++ project\codes-by--lhw\WPFTest\Utils\bin\Debug\System.Data.SQLite.dll
+E:\C++ project\codes-by--lhw\WPFTest\Utils\bin\Debug\Utils.dll
+E:\C++ project\codes-by--lhw\WPFTest\Utils\bin\Debug\Utils.pdb
+E:\C++ project\codes-by--lhw\WPFTest\Utils\bin\Debug\BaseComponents.dll
+E:\C++ project\codes-by--lhw\WPFTest\Utils\bin\Debug\BaseComponents.pdb
+E:\C++ project\codes-by--lhw\WPFTest\Utils\obj\Debug\Utils.csprojAssemblyReference.cache
+E:\C++ project\codes-by--lhw\WPFTest\Utils\obj\Debug\Utils.csproj.ResolveComReference.cache
+E:\C++ project\codes-by--lhw\WPFTest\Utils\obj\Debug\Utils.csproj.CoreCompileInputs.cache
+E:\C++ project\codes-by--lhw\WPFTest\Utils\obj\Debug\Utils.csproj.CopyComplete
+E:\C++ project\codes-by--lhw\WPFTest\Utils\obj\Debug\Utils.dll
+E:\C++ project\codes-by--lhw\WPFTest\Utils\obj\Debug\Utils.pdb

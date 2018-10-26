@@ -3,3 +3,9 @@ E:\vsprojects\WPFTest\dll_csharp\bin\Debug\dll_csharp.pdb
 E:\vsprojects\WPFTest\dll_csharp\obj\Debug\dll_csharp.dll
 E:\vsprojects\WPFTest\dll_csharp\obj\Debug\dll_csharp.pdb
 E:\vsprojects\WPFTest\dll_csharp\obj\Debug\dll_csharp.csprojResolveAssemblyReference.cache
+E:\C++ project\codes-by--lhw\WPFTest\dll_csharp\bin\Debug\dll_csharp.dll
+E:\C++ project\codes-by--lhw\WPFTest\dll_csharp\bin\Debug\dll_csharp.pdb
+E:\C++ project\codes-by--lhw\WPFTest\dll_csharp\obj\Debug\dll_csharp.csprojAssemblyReference.cache
+E:\C++ project\codes-by--lhw\WPFTest\dll_csharp\obj\Debug\dll_csharp.csproj.CoreCompileInputs.cache
+E:\C++ project\codes-by--lhw\WPFTest\dll_csharp\obj\Debug\dll_csharp.dll
+E:\C++ project\codes-by--lhw\WPFTest\dll_csharp\obj\Debug\dll_csharp.pdb
